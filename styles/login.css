@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    background: 
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url("../assets/background.png") no-repeat center center fixed;
+
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.login-box {
+    position: relative;
+    width: 300px;
+    padding: 60px 30px;
+    margin-right: 150px;
+    text-align: center;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+.login-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 2px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.45),
+        rgba(255, 255, 255, 0.15)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+h2 {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 35px;
+    border: none;
+    border-radius: 8px;
+    background: #3f3f3f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #5a5a5a;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    left: 170px;             
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 700px;           
+    height: 600px;
+
+    background: url("../assets/moviehub.png") no-repeat center;
+    background-size: contain;
+    
+    opacity: 1;
+}
+
+.movie-text {
+    position: fixed;
+    left: 250px;
+    bottom: 80px;
+
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    text-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+.footer-text {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+    pointer-events: none;
+}

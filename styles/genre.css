@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+      url("../assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.big-logo {
+    width: 320px;
+    max-width: 40%;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: rgba(51, 51, 51, 0.85);
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.nav-buttons a:hover {
+    background: orange;
+    color: black;
+}
+
+.content {
+    padding: 20px 50px;
+    text-align: center;
+    flex: 1;
+}
+
+.welcome-title {
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hub {
+    color: orange;
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 45px;
+    margin-top: 20px;
+}
+
+.genre-title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    color: orange;
+    font-weight: bold;
+    text-align: left;
+}
+
+.movie-item p {
+    max-width: 200px;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.movie-item a img {
+    width: 220px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 13px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.movie-item a img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px orange;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    background: rgba(0,0,0,0.6);
+    opacity: 0.85;
+}
+
+@media screen and (max-width: 768px) {
+    .big-logo {
+        width: 220px;
+    }
+
+    .welcome-title {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .movie-item a img {
+        width: 150px;
+        height: 220px;
+    }
+
+    .movie-item h3 {
+        font-size: 20px;
+    }
+}
+
