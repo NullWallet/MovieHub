@@ -76,10 +76,19 @@ body {
     text-align: left;
 }
 
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the image and the p tag horizontally */
+    text-align: center;
+}
+
 .movie-item p {
     max-width: 200px;
     overflow-wrap: break-word;
     white-space: normal;
+    text-align: center;
+    width: 100%;
 }
 
 .movie-item a img {
